@@ -1,0 +1,313 @@
+# ============================================
+# AI Consultation Platform - .gitignore
+# ============================================
+
+# ============================================
+# Environment & Secrets
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+*.env
+!.env.example
+
+# API Keys & Secrets
+secrets/
+vault/
+*.key
+*.pem
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# ============================================
+# Python Backend (FastAPI Microservices)
+# ============================================
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+virtualenv/
+__pypackages__/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+*.spec
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.prof
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# ============================================
+# Node.js / Next.js Frontend
+# ============================================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# PWA
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
+
+# ============================================
+# Database & Storage
+# ============================================
+# PostgreSQL
+postgres-data/
+pgdata/
+*.sql
+*.dump
+*.backup
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Redis
+redis-data/
+dump.rdb
+
+# Qdrant (Vector DB)
+qdrant-data/
+qdrant_storage/
+snapshots/
+
+# ============================================
+# Docker
+# ============================================
+# Docker volumes
+docker-data/
+docker-volumes/
+docker-compose.override.yml
+
+# ============================================
+# Logs & Monitoring
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log.*
+
+# Grafana
+grafana-data/
+
+# Prometheus
+prometheus-data/
+
+# ============================================
+# IDE & Text Editors
+# ============================================
+# VS Code (keep settings for team, ignore local only)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# AI Assistants & Helpers
+# ============================================
+# Claude Dev Helper
+.claude-dev-helper/
+
+# Kilocode worktrees
+.kilocode/worktrees/
+.kilocode/cache/
+
+# GitHub Copilot local data
+.copilot/
+
+# Cursor AI
+.cursor/
+
+# Aider
+.aider*
+
+# Continue
+.continue/
+
+# ============================================
+# OS-specific
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# RAG Documents & Uploads (опционально)
+# ============================================
+# Если документы для RAG хранятся в репо, раскомментируй:
+# uploads/
+# documents/
+# rag-documents/
+
+# Временные файлы обработки документов
+temp-documents/
+tmp-uploads/
+*.tmp
+*.temp
+
+# ============================================
+# Backup & Dumps
+# ============================================
+backups/
+*.bak
+*.backup
+*.old
+*.orig
+
+# ============================================
+# Testing
+# ============================================
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
+
+# E2E screenshots
+screenshots/
+test-screenshots/
+
+# ============================================
+# Miscellaneous
+# ============================================
+# Terraform (если используешь для VPS)
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Kubernetes secrets (если используешь)
+k8s/secrets/
+
+# Certificates
+certs/
+ssl/
+
+# Alembic (но оставляем migrations/)
+alembic/versions/*.pyc
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Package lock files (опционально, если хочешь контролировать версии)
+# package-lock.json
+# pnpm-lock.yaml
+# poetry.lock
