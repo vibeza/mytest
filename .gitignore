@@ -13,6 +13,11 @@
 .env.development
 *.env
 
+# Local planning files (do not commit)
+memories/
+prompt-generate-file-structure.md
+tech-plan-ai-consultations.md
+
 # API Keys & Secrets
 secrets/
 vault/
@@ -174,13 +179,8 @@ prometheus-data/
 # ============================================
 # IDE & Text Editors
 # ============================================
-# VS Code (keep settings for team, ignore local only)
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/mcp.json
+# VS Code
+.vscode/
 *.code-workspace
 
 # PyCharm / IntelliJ
